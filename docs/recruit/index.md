@@ -7,8 +7,6 @@ Your mission—should you choose to accept it—is to master the art of building
 
 This hands-on training is your entry point into the **world of agents**: from grounded prompts to Adaptive Cards and agent flows, you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
 
----
-
 ## 🎯 Mission Objective
 
 By completing the Agent Academy, you'll be able to:
@@ -19,8 +17,6 @@ By completing the Agent Academy, you'll be able to:
 - Enhance agents with **Topics**, **Adaptive Cards**, and **Agent Flows**
 - Deploy agents to **Microsoft Teams** and **Microsoft 365 Copilot**
 
----
-
 ## 🧪 Prerequisites
 
 To complete all missions, you’ll need:
@@ -28,8 +24,6 @@ To complete all missions, you’ll need:
 - A Microsoft 365 Developer tenant (with SharePoint enabled)
 - Access to **Microsoft Copilot Studio** (trial or licensed)
 - Optional: Basic knowledge of SharePoint, Power Platform, or Power Fx
-
----
 
 ## 🧬 Who This Is For
 
@@ -39,8 +33,6 @@ This course is ideal for:
 - IT pros building **Microsoft 365 Copilot extensions**
 - Power Platform enthusiasts who want to **level up** with intelligent agents
 - Anyone who prefers to learn by **doing**
-
----
 
 ## 🧭 Curriculum Overview
 
@@ -63,9 +55,9 @@ This academy is broken into progressive lessons—each one designed as a field m
 | `12` | 🪪 [Understanding Licensing](./12-understanding-licensing/README.md) | Learn how licensing and billing works with Copilot Studio |
 | `13` | 🚨 [Securing Your Recruit Badge](./course-completion-badges-recruit/README.md) |  Claim your badge and mark your achievement! |
 
-!!! note
-    ✅ Completing this curriculum earns you the **Recruit** badge.  
-    🔓 **Operative** and **Commander** will be unlocked in future phases.
+> [!NOTE]
+> ✅ Completing this curriculum earns you the **Recruit** badge.  
+> 🔓 **Operative** and **Commander** will be unlocked in future phases.
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit" alt="Analytics" />
