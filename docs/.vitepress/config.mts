@@ -4,7 +4,14 @@ import { mermaidPlugin } from "./plugins/vitepress-mermaid";
 export default defineConfig({
   title: "Agent Academy",
   base: "/agent-academy/",
-  head: [["link", { rel: "icon", href: "/agent-academy/images/logo.png" }]],
+  head: [
+    ["link", { rel: "icon", href: "/agent-academy/images/logo.png" }],
+    [
+      "script",
+      { text: "text/javascript" },
+      `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "u32wbf0qvv");`,
+    ],
+  ],
   description:
     "Welcome to Copilot Studio Agent Academy. Curated lessons on getting started building agents with Copilot Studio.",
   themeConfig: {

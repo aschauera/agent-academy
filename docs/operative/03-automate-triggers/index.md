@@ -63,9 +63,9 @@ Previously in [Recruit](../../recruit/10-add-event-triggers/README.md), we learn
 - **Testing & observability:**
       - You can test triggers from the agent's test pane and inspect behavior with the activity map before publishing.
 
-!!! info "TL;DR for developers"
-
-    Think of event triggers as **webhook-like signals** that push a structured payload into your agent, letting it _initiate_ work and chain actions across systems - without waiting for a user to ask.
+> [!NOTE] TL;DR for developers
+>
+> Think of event triggers as **webhook-like signals** that push a structured payload into your agent, letting it _initiate_ work and chain actions across systems - without waiting for a user to ask.
 
 ### Topic triggers - how they differ
 
@@ -78,11 +78,11 @@ Topic triggers control _when a topic runs_, usually in response to a user messag
 
 Other trigger types include `Message received`, `Event received`, `Activity received`, `Conversation update`, `Invoke received`, `On redirect`, `Inactivity`, and `Plan complete`.
 
-!!! info "Core difference"
-
-    Topic triggers are _conversation activity_ starters inside the chat.
-    
-    Event triggers are system _event_ starters delivered via connectors that can run the agent without any conversation at all.
+> [!NOTE] Core difference
+>
+> Topic triggers are _conversation activity_ starters inside the chat.
+> 
+> Event triggers are system _event_ starters delivered via connectors that can run the agent without any conversation at all.
 
 ### Quick guide of Topic trigger vs Event trigger
 
@@ -132,13 +132,12 @@ We're next going to add an event trigger to the **Hiring Agent** and build an ag
 
 ### ✨ Use case scenario
 
-!!! info ""
-
-    **As an** HR Recruiter
-
-    **I want to** be notified of when an email with a resume has arrived in my Inbox that has been automatically uploaded to Dataverse
-
-    **So that I can** stay notified of resumes sent by email for applications automatically uploaded to Dataverse
+> [!NOTE] Use case scenario
+> **As an** HR Recruiter
+>
+> **I want to** be notified of when an email with a resume has arrived in my Inbox that has been automatically uploaded to Dataverse
+>
+> **So that I can** stay notified of resumes sent by email for applications automatically uploaded to Dataverse
 
 We'll be achieving this using two techniques
 
@@ -148,7 +147,7 @@ We'll be achieving this using two techniques
     1. Then send a prompt to the agent for further processing by passing input parameters from the Dataverse actions.
 
 1. An agent flow will be added to the child **Application Intake Agent** which is invoked by the prompt in the event trigger.
-    1. Use the input parameters passed from the prompt of the event trigger in an adaptive card posted to a channel in Microsoft Teams to notify the HR Recruitment team. The adaptive card will have a link to the row in Dataverse which will be viewed in the **Hiring Agent**.
+1. Use the input parameters passed from the prompt of the event trigger in an adaptive card posted to a channel in Microsoft Teams to notify the HR Recruitment team. The adaptive card will have a link to the row in Dataverse which will be viewed in the **Hiring Agent**.
 
 Let's begin!
 
@@ -159,8 +158,8 @@ You'll need to **either**:
 - **Have completed Mission 01 and Mission 02** and have your Hiring Agent ready, **OR**
 - **Import the Mission 03 starter solution** if you're starting fresh or need to catch up. [Download Mission 03 Starter Solution](https://aka.ms/agent-academy)
 
-!!! note "Solution Import and Sample Data"
-    If you're using the starter solution, refer to [Mission 01](../01-get-started/README.md) for detailed instructions on how to import solutions and sample data into your environment.
+> [!NOTE] Solution Import and Sample Data
+> If you're using the starter solution, refer to [Mission 01](../01-get-started/README.md) for detailed instructions on how to import solutions and sample data into your environment.
 
 You'll also need access to **Microsoft Teams** to complete the second lab exercise of posting an adaptive card to Microsoft Teams.
 
@@ -168,23 +167,23 @@ You'll also need access to **Microsoft Teams** to complete the second lab exerci
 
 1. In the Hiring Agent, scroll down in the **Overview tab** and select **+ Add trigger**.
 
-       ![Add trigger to agent](assets/3.1_01_AddTrigger.png)
+    ![Add trigger to agent](./assets/3.1_01_AddTrigger.png)
 
 1. A list of triggers will appear. Select **When a new email arrives (V3)** and select **Next**.
 
-       ![Select When a new email arrives (V3) trigger](assets/3.1_02_WhenANewEmailArrives.png)
+    ![Select When a new email arrives (V3) trigger](./assets/3.1_02_WhenANewEmailArrives.png)
 
 1. We'll now see the **Trigger name** and the **Sign in** connection references for the apps listed..
 
-       Rename the trigger name to the following,
+    Rename the trigger name to the following,
     
-       ```text
-       When a new email arrives from an applicant
-       ```
+    ```text
+    When a new email arrives from an applicant
+    ```
 
-       Make sure you see a green check by each of the connection references the apps listed. If you don't see a green check, sign in through the ellipsis (...) and select **+ New connection reference** to create a new connection reference.
+    Make sure you see a green check by each of the connection references the apps listed. If you don't see a green check, sign in through the ellipsis (...) and select **+ New connection reference** to create a new connection reference.
 
-       ![Update details for trigger name and check connection references](assets/3.1_03_RenameTriggerName.png)
+    ![Update details for trigger name and check connection references](./assets/3.1_03_RenameTriggerName.png)
 
 1. The final step is to set the input properties of the trigger. Update the following properties to the following,
 
@@ -194,49 +193,49 @@ You'll also need access to **Microsoft Teams** to complete the second lab exerci
      | **Subject Filter (Optional)** | Type/Enter with keyboard | Application |
      | **Only with Attachments (Optional)** | Dropdown | Yes |
 
-       Select **Create trigger**.
+    Select **Create trigger**.
 
-       ![Configure trigger inputs](assets/3.1_04_ConfigureTriggerInputs.png)
+    ![Configure trigger inputs](./assets/3.1_04_ConfigureTriggerInputs.png)
 
 1. Once created, a confirmation message will appear that the trigger has been added to the agent. Select **Close** and the trigger will be listed in the **Triggers** section.
 
-       We're now going to update the event trigger to add some more automation capabilities. Select the **ellipsis (...)** by the trigger and select **Edit in Power Automate**.
-
-       ![Select Edit in Power Automate](assets/3.1_05_SelectEditInPowerAutomate.png)
+    We're now going to update the event trigger to add some more automation capabilities. Select the **ellipsis (...)** by the trigger and select **Edit in Power Automate**.
+    
+    ![Select Edit in Power Automate](./assets/3.1_05_SelectEditInPowerAutomate.png)
 
 1. The trigger will then load as a flow in the Power Automate maker portal. What you're seeing is the flow designer in the Power Automate maker portal. This is where we can add further logic and actions for more automation. The trigger will appear at the top, followed by **Sends a prompt to the specified copilot for processing** as the last action in the flow.
 
-       ![Flow designer in Power Automate maker portal](assets/3.1_06_EditInPowerAutomate.png)
+    ![Flow designer in Power Automate maker portal](./assets/3.1_06_EditInPowerAutomate.png)
 
 1. By default, the **When a new email arrives** trigger in Power Automate may process multiple emails together if several arrive at once, running the flow only once for the batch.
 
-       To ensure the flow runs separately for each email, enable the **Split On** setting in the trigger’s settings and select `@triggerOutputs()?['body/value']` in the dropdown array field.
+    To ensure the flow runs separately for each email, enable the **Split On** setting in the trigger’s settings and select `@triggerOutputs()?['body/value']` in the dropdown array field.
 
-       With **Split On** turned on and the array field set to `@triggerOutputs()?['body/value']`, the flow will run individually for each message, even if many arrive simultaneously.
+    With **Split On** turned on and the array field set to `@triggerOutputs()?['body/value']`, the flow will run individually for each message, even if many arrive simultaneously.
 
-       ![Turn on Split On settings in the trigger](assets/3.1_07_UpdateTriggerSettings.png)
+    ![Turn on Split On settings in the trigger](./assets/3.1_07_UpdateTriggerSettings.png)
 
 1. Let's next add some logic to check the file type of the attachment, we only want to upload .PDF file attachments and not images (these could come from email signatures). Select the **+** icon below the trigger and select **Control** under the **Built in tools** section.
 
-       ![Select Control](assets/3.1_08_Control.png)
+    ![Select Control](./assets/3.1_08_Control.png)
 
 1. Select the **Condition** action.
 
-       ![Select Condition action](assets/3.1_09_AddConditionAction.png)
+    ![Select Condition action](./assets/3.1_09_AddConditionAction.png)
 
 1. Now we configure the condition to check if the file attachment’s type is .PDF. In the **Choose a value** field, select the **lightning bolt icon** or **fx icon** to the right.
 
-       1. In the **Search** field type the following,
+    1. In the **Search** field type the following,
+    
+        ```text
+        content type
+        ```
+    
+    1. Then select the **Attachments Content-Type** parameter from the trigger.
+    
+    1. Next, select **Add** to add the dynamic content input into the **Id** parameter of the action.
 
-          ```text
-          content type
-          ```
-
-       1. Then select the **Attachments Content-Type** parameter from the trigger.
-
-       1. Next, select **Add** to add the dynamic content input into the **Id** parameter of the action.
-
-       ![Configure Condition action](assets/3.1_10_SetDynamicContentValue_V2.png)
+       ![Configure Condition action](./assets/3.1_10_SetDynamicContentValue_V2.png)
 
 1. Let's pause here for a moment, you probably noticed that the **For each** action automatically appeared.
 
@@ -246,69 +245,69 @@ You'll also need access to **Microsoft Teams** to complete the second lab exerci
 
       To learn more about this, expand the following additional learning block.
 
-    ??? info "Additional Learning: For each action automatically appearing"
+> [!NOTE] Additional Learning: For each action automatically appearing
+>
+> 🤔 **Why does "Apply to each" or "For each" Automatically Appear?**
+>      
+> When you select a parameter (dynamic content) that represents a list or array of items - for example, a list of attachments, emails, or rows - Power Automate recognizes that you might want to process each item individually.
+>      
+> To help you do this, Power Automate automatically adds an **“Apply to each”** (or **For each**) loop around your action. This ensures that your action will run once for every item in the list, rather than trying to process the whole list at once (which could cause errors).
+>
+> 🦋 **Example**
+>      
+> - If you select "Attachments" from a previous action (which is an array), and try to use it in an action that expects a single file, Power Automate wraps your action in an **"Apply to each"** (or **For each**) loop. 
+> - This way, your action will run for **each attachment** - one at a time.
+>          
+> 💡 **Key Points**
+>     
+> - **Automatic:** The loop appears automatically to help you process each item in a collection.
+> - **Prevents errors:** Without the loop, your action might fail because it can't handle multiple items at once.
+> - **Visual cue:** It's a visual way to show that your flow will repeat the action for every item in the list.
 
-        🤔 **Why does "Apply to each" or "For each" Automatically Appear?**
-        
-        When you select a parameter (dynamic content) that represents a list or array of items - for example, a list of attachments, emails, or rows - Power Automate recognizes that you might want to process each item individually.
-        
-        To help you do this, Power Automate automatically adds an **“Apply to each”** (or **For each**) loop around your action. This ensures that your action will run once for every item in the list, rather than trying to process the whole list at once (which could cause errors).
-
-        🦋 **Example**
-        
-        - If you select "Attachments" from a previous action (which is an array), and try to use it in an action that expects a single file, Power Automate wraps your action in an **"Apply to each"** (or **For each**) loop. 
-        - This way, your action will run for **each attachment** - one at a time.
-           
-        💡 **Key Points**
-        
-        - **Automatic:** The loop appears automatically to help you process each item in a collection.
-        - **Prevents errors:** Without the loop, your action might fail because it can't handle multiple items at once.
-        - **Visual cue:** It's a visual way to show that your flow will repeat the action for every item in the list.
-
-       ![For Each action explained](assets/3.1_11_ForEach.png)
+    ![For Each action explained](./assets/3.1_11_ForEach.png)
 
 1. Next, in the other **Choose a value** field, type the following,
 
-       ```text
-       application/pdf
-       ```
-       
-      This will ensure that for each file attachment, it will check the file extension format is .PDF.
+    ```text
+    application/pdf
+    ```
+    
+    This will ensure that for each file attachment, it will check the file extension format is .PDF.
 
-       ![EqualToValue](assets/3.1_12_EqualToValue.png)
+    ![EqualToValue](./assets/3.1_12_EqualToValue.png)
 
 1. Now we'll configure the **True** path to extract the file from the email and upload it into the **Resume** Dataverse table.
 
-       Add a new action below in the **True** path and search for `html to text`. Select the **Html to text** action. 
+    Add a new action below in the **True** path and search for `html to text`. Select the **Html to text** action. 
+    
+    To learn more about the **Html to text** action, expand the following additional learning block.
 
-       To learn more about the **Html to text** action, expand the following additional learning block.
-
-    ??? info "Additional Learning: Html to text action"
-
-        🤔 **What is the "HTML to text" Action?**
-        
-        The **HTML to text** action in Power Automate is used to convert HTML-formatted content into plain text. This is especially useful when you receive data (like emails, web content, or API responses) that contains HTML tags, and you want to extract just the readable text without any formatting or code.
-
-        ⚙️ **How does it work?**
-        
-        - **Input:** You provide a string of HTML content (for example, the body of an email).
-        - **Output:** The action removes all HTML tags and returns only the plain text.
-        
-        👍🏻 **When should you use it?**
-        
-        - When you want to extract readable text from emails, web pages, or API responses that contain HTML.
-        - Before sending content to systems that don’t support HTML formatting (like SMS, Teams messages, or databases).
-        - To clean up data for further processing or analysis.
-
-        🔭 **Where to find it?**
-        
-        - In Power Automate for in Agent Flows, search for the action called `HTML to text`. It's under the **Data Operations** connector.
-           
-        💡 **Key Points**
-        
-        - It removes all HTML tags and leaves only the text.
-        - It does not interpret or execute scripts/styles - just strips tags.
-        - Useful for data cleaning and preparing content for plain-text outputs.    
+> [!NOTE] Additional Learning: Html to text action
+>
+> 🤔 **What is the "HTML to text" Action?**
+>        
+> The **HTML to text** action in Power Automate is used to convert HTML-formatted content into plain text. This is especially useful when you receive data (like emails, web content, or API responses) that contains HTML tags, and you want to extract just the readable text without any formatting or code.
+>
+> ⚙️ **How does it work?**
+>        
+> - **Input:** You provide a string of HTML content (for example, the body of an email).
+> - **Output:** The action removes all HTML tags and returns only the plain text.
+>        
+> 👍🏻 **When should you use it?**
+>        
+> - When you want to extract readable text from emails, web pages, or API responses that contain HTML.
+> - Before sending content to systems that don’t support HTML formatting (like SMS, Teams messages, or databases).
+> - To clean up data for further processing or analysis.
+>
+> 🔭 **Where to find it?**
+>        
+> - In Power Automate for in Agent Flows, search for the action called `HTML to text`. It's under the **Data Operations** connector.
+>           
+> 💡 **Key Points**
+>        
+> - It removes all HTML tags and leaves only the text.
+> - It does not interpret or execute scripts/styles - just strips tags.
+> - Useful for data cleaning and preparing content for plain-text outputs.    
 
        ![Add HTML to text action](assets/3.1_13_AddHTMLToTextAction.png)
 
