@@ -11,17 +11,15 @@ Your mission—should you choose to accept it—is to master the art of building
 
 This hands-on training is your entry point into the **world of agents**: from grounded prompts to Adaptive Cards and agent flows, you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
 
----
-
 ## 🏅 Rank Progression
 
 The **Copilot Studio Agent Academy** is a multi-phase training program designed to build your skills across three agent ranks. Each level includes a badge and increasing responsibilities:
 
 | Rank             | Level | Visual |
 |------------------|:-----:|--------|
-| 🟢 **Recruit**</br></br>[🚀 Get started](https://aka.ms/agent-academy-recruit){ .md-button .md-button--primary }     | •     | ![Recruit Badge](./images/mcs-agent-academy-recruit-badge.png){ width="300" }     |
-| 🔵 **Operative**</br>(Coming Soon)   | ••    | ![Operative Badge](./images/mcs-agent-academy-operative-badge.png){ width="300" } |
-| 🟡 **Commander**</br>(Coming Soon)    | •••   | ![Commander Badge](./images/mcs-agent-academy-commander-badge.png){ width="300" } |
+| 🟢 **Recruit** ([Link](https://aka.ms/agent-academy-recruit)) | •     | ![Recruit Badge](./images/mcs-agent-academy-recruit-badge.png){ width="300" }     |
+| 🔵 **Operative** ([Link](https://aka.ms/agent-academy-operative)) | ••    | ![Operative Badge](./images/mcs-agent-academy-operative-badge.png){ width="300" } |
+| 🟡 **Commander** (Coming Soon)    | •••   | ![Commander Badge](./images/mcs-agent-academy-commander-badge.png){ width="300" } |
 
 Each level builds on the last. Finish your Recruit mission, and stay tuned to level up your agent credentials.
 

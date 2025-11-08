@@ -100,8 +100,8 @@ Connected agents are **full-fledged, independent agents** that your main agent c
 - A separate technical support agent maintained by the product team
 - A separate returns agent maintained by the operations team
 
-!!! tip "Tip"
-    You can mix both approaches! For example, your main agent could connect to external agents from other teams while also having its own child agents for specialized internal tasks.
+> [!TIP]
+> You can mix both approaches! For example, your main agent could connect to external agents from other teams while also having its own child agents for specialized internal tasks.
 
 ## 🎯 Multi-agent architecture patterns
 
@@ -113,8 +113,8 @@ When designing multi-agent systems, several patterns emerge based on how agents 
 | **Pipeline**         | Agents pass work sequentially from one to the next, each adding value before passing to the next stage. | Linear processes like application processing (intake → screening → interview → decision) |
 | **Collaborative**    | Agents work together simultaneously on different aspects of the same problem, sharing context and results. | Complex analysis requiring multiple perspectives or expertise areas |
 
-!!! tip "Tip"
-    You may even have a hybrid of two or more of these patterns.
+> [!TIP]
+> You may even have a hybrid of two or more of these patterns.
 
 ## 💬Agent communication and context sharing
 
@@ -226,8 +226,8 @@ You'll need to **either**:
 - **Have completed Mission 01** and have your Hiring Agent ready, **OR**
 - **Import the Mission 02 starter solution** if you're starting fresh or need to catch up. [Download Mission 02 Starter Solution](https://aka.ms/agent-academy)
 
-!!! note "Solution Import and Sample Data"
-    If you're using the starter solution, refer to [Mission 01](../01-get-started/README.md) for detailed instructions on how to import solutions and sample data into your environment.
+> [!NOTE] "Solution Import and Sample Data"
+> If you're using the starter solution, refer to [Mission 01](../01-get-started/README.md) for detailed instructions on how to import solutions and sample data into your environment.
 
 ### 2.1.1 Solution setup
 
@@ -542,24 +542,32 @@ Now let's create our connected agent for interview preparation and add it to you
 1. Toggle **Web Search** to **Disabled**
 
 1. Select **Create**  
+
     ![Create the Interview Agent](./assets/2-create-interview-agent.png)
 
 ### 2.2.3 Configure data access and publish
 
 1. In the **Knowledge** section, select **+ Add knowledge**  
+
     ![Add knowledge](./assets/2-interview-agent-add-knowledge.png)
+
 1. Select **Dataverse**  
+
     ![Select Dataverse](./assets/2-interview-agent-add-knowledge-select-dataverse.png)
+
 1. In the **Search box**, type `ppa_`. This is the prefix for the tables you imported previously.
 1. **Select** all 5 tables (Candidate, Evaluation Criteria, Job Application, Job Role, Resume)
 1. Select **Add to agent**  
+
     ![Select Dataverse tables](./assets/2-interview-agent-add-knowledge-select-tables.png)
+
 1. Select the **Settings**, on the Interview Agent, and set the following settings:
 
     - **Let other agents connect to and use this one:** `On`
     - **Use general knowledge**: `Off`
     - **File uploads**: `Off`
     - **Content moderation level:** `Medium`
+
 1. Select **Save**
 1. Select **Publish**, and wait for the publishing to complete.
 
@@ -576,11 +584,13 @@ Now let's create our connected agent for interview preparation and add it to you
     ```
 
     ![Connected Agent Details](./assets/2-add-connected-agent.png)
+
     Notice that the Pass conversation history to this agent is checked. This allows the parent agent to provide full context to the connected agent.
 
 1. Select **Add agent**
 
 1. Ensure that you see both the **Application Intake Agent**, and the **Interview Agent**. Notice how one is a child and the other is a connected agent.  
+
     ![Child and connected agent](./assets/2-child-and-connected.png)
 
 ### 2.2.5 Test multi-agent collaboration
@@ -596,7 +606,9 @@ Now let's create our connected agent for interview preparation and add it to you
     ![Multiple agents testing](./assets/2-multi-agent-test.png)
 
 1. Notice how the Hiring Agent delegated the upload to the child agent, and then asked the Interview Agent to provide a summary and job role match using its knowledge.
+
    Play with different ways of asking questions about Resumes, Job Roles and Evaluation Criteria.
+
    **Examples:**
 
     ```text
@@ -634,7 +646,7 @@ Your enhanced hiring system is now ready for the advanced features we'll add in 
 
 🚀**Next up:** In your next mission, you'll learn how to configure your agent to autonomously process resumes from emails!
 
-⏩[Move to Mission 03: Automate your agent with triggers](../03-automate-triggers/README.md)
+⏩[Move to Mission 03: Automate your agent with triggers](../03-automate-triggers/)
 
 ## 📚 Tactical Resources
 
