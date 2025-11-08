@@ -1,6 +1,6 @@
 # Applying Deep Reasoning to Evaluate Candidate Fit and Interview Preparation
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## Theory
 

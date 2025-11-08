@@ -1,6 +1,6 @@
 # 🕵️‍♂️ Mission 04: Authoring Agent Instructions
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## 🕵️‍♂️ CODENAME: `OPERATION SECRET DIRECTIVE`
 

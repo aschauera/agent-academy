@@ -1,6 +1,6 @@
 # 🚨 Mission 08: Enhanced prompts with Dataverse grounding
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## 🕵️‍♂️ CODENAME: `OPERATION GROUNDING CONTROL`
 

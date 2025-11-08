@@ -1,6 +1,6 @@
 # 🚨 Mission 01: Get started with the Hiring Agent
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## 🕵️‍♂️ CODENAME: `OPERATION TALENT SCOUT`
 
@@ -14,8 +14,6 @@ Your mission, should you choose to accept it, is to deploy and configure a compr
 
 This initial deployment establishes the command center that you'll enhance throughout the Agent Academy Operative program. Consider this your base of operations - the foundation upon which you'll build an entire network of specialized agents in subsequent missions.
 
----
-
 ## 🔎 Objectives
 
 By completing this mission, you will:
@@ -24,8 +22,6 @@ By completing this mission, you will:
 - **Solution Deployment**: Successfully import and configure the fundamentals of a hiring management system
 - **Agent Creation**: Build a hiring agent that is the start of the scenario you're going to build as an Agent Academy Operative
 
----
-
 ## 🔍 Prerequisites
 
 Before embarking on this mission, ensure you have:
@@ -33,8 +29,6 @@ Before embarking on this mission, ensure you have:
 - Copilot Studio license
 - Access to a Microsoft Power Platform environment
 - Administrative permissions to create solutions and agents
-
----
 
 ## 🏢 Understanding the Hiring Automation Scenario
 
@@ -59,8 +53,6 @@ The solution helps HR teams save time and make better decisions by:
 
 This scenario is ideal for organizations looking to modernize their recruitment workflows using AI-powered automation, while maintaining transparency, fairness, and efficiency.
 
----
-
 ## 🧪 Lab: Setup the Hiring Agent
 
 In this hands-on lab, you'll establish the foundation for your hiring automation system. You'll begin by importing a pre-configured solution that contains all the necessary Dataverse tables and data structure for managing candidates, job positions, and hiring workflows. Next, you'll populate these tables with sample data that will support your learning throughout this module and provide realistic scenarios for testing. Finally, you'll create the Hiring Agent in Copilot Studio, setting up the basic conversational interface that will serve as the cornerstone for all the other features you'll add in future missions.
@@ -75,9 +67,9 @@ In this hands-on lab, you'll establish the foundation for your hiring automation
 1. Select **Next**
 1. Select **Import**
 
-!!! success
-    On success, you will see a green notification bar with the following message when it's done:  
-    "Solution "Operative" imported successfully."
+> [!NOTE] Success
+> On success, you will see a green notification bar with the following message when it's done:  
+> "Solution "Operative" imported successfully."
 
 When the solution is imported, take a look at what you imported by selecting the display name of the solution (`Operative`).
 
@@ -112,8 +104,8 @@ In this lab, you will add sample data to some of the tables that you imported in
 1. Select the **Hiring Hub** Model-Driven App by selecting the checkmark in front of the row
 1. Select the **Play** button at the top
 
-    !!! warning
-        You might be prompted to login again. Make sure to do that. After doing that, you should see the Hiring Hub app.
+    > [!WARNING]
+    > You might be prompted to login again. Make sure to do that. After doing that, you should see the Hiring Hub app.
 
 1. Select **Job Roles** in the left navigation
 1. Select the **More** icon (three dots below each other) in the command bar
@@ -133,8 +125,8 @@ In this lab, you will add sample data to some of the tables that you imported in
 
 1. Make sure the mapping is correct and select **Finish Import**
 
-    !!! info
-        This will start an import and you will be able to track progress or finish the process immediately by selecting **Done**
+    > [!NOTE] info
+    > This will start an import and you will be able to track progress or finish the process immediately by selecting **Done**
 
 1. Select **Done**
 
@@ -165,8 +157,8 @@ This can take a little while, but you can hit the **Refresh** button to see if t
 1. Select **OK**
 1. Make sure the rest of the mapping is correct too and select **Finish Import**
 
-    !!! info
-        This will start an import again and you will be able to track progress or finish the process immediately by selecting **Done**
+    > [!NOTE] Info
+    > This will start an import again and you will be able to track progress or finish the process immediately by selecting **Done**
 
 1. Select **Done**
 
@@ -202,8 +194,6 @@ Now you are done with the setup of the prerequisites, it's time for the actual w
 
 This will create the Hiring Agent for you, which you will use throughout this Operative course.
 
----
-
 ## 🎉 Mission Complete
 
 Mission 01 is completed! You now have mastered the following skills:
@@ -212,11 +202,9 @@ Mission 01 is completed! You now have mastered the following skills:
 ✅ **Solution Deployment**: Successfully imported and configured the fundamentals of a hiring management system  
 ✅ **Agent Creation**: Built an hiring agent that is the start of the scenario you're going to build as an Agent Academy Operative  
 
-Next up is [Mission 02](../02-multi-agent/README.md): Make your agent multi-agent ready with connected agents.
-
----
+Next up is [Mission 02](../02-multi-agent/): Make your agent multi-agent ready with connected agents.
 
 ## 📚 Tactical Resources
 
-📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)
+📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)  
 📖 [Microsoft Dataverse Documentation](https://learn.microsoft.com/power-apps/maker/data-platform)

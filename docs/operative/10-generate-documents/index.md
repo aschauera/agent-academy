@@ -1,6 +1,6 @@
 # Generate Candidate Specific Interview Docs with Prompts
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## Theory
 

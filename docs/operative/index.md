@@ -7,9 +7,7 @@ Your advanced mission—should you choose to accept it—is to master the art of
 
 This intensive training takes you beyond basic agent creation into the sophisticated world of **multi-agent orchestration**: from hiring automation to AI safety, you'll learn to build, coordinate, and deploy intelligent agent ecosystems using real-world enterprise scenarios.
 
---8<-- "disclaimer.md"
-
----
+<!--@include: ../includes/disclaimer.md-->
 
 ## 🎯 Mission Objective
 
@@ -21,8 +19,6 @@ By completing the Agent Academy Operative program, you'll be able to:
 - Build **multi-modal prompts** for document processing and analysis
 - Deploy **enterprise-ready agents** with proper governance and testing
 
----
-
 ## 🧪 Prerequisites
 
 To complete all missions, you'll need:
@@ -31,8 +27,6 @@ To complete all missions, you'll need:
 - A Microsoft Power Platform environment with **Copilot Studio** license
 - Access to **Microsoft Dataverse**
 - Administrative permissions to create solutions and agents
-
----
 
 ## 🧬 Who This Is For
 
@@ -44,15 +38,13 @@ This advanced course is ideal for:
 - **Business analysts** creating complex automation workflows
 - Anyone ready to **level up** from basic agents to enterprise systems
 
----
-
 ## 🧭 Curriculum Overview
 
 This academy is structured as a progressive series of field operations—each mission builds upon the previous to create a comprehensive hiring automation system.
 
 | Mission | Title | Operation Briefing |
 |---------|-------|-------------------|
-| `01` | 🚨 [Get started with the Hiring Agent](./01-get-started/README.md) | Deploy foundational infrastructure and create your central orchestrator agent |
+| `01` | 🚨 [Get started with the Hiring Agent](./01-get-started/) | Deploy foundational infrastructure and create your central orchestrator agent |
 | `02` | 🎭 [Make your agent multi-agent ready with connected agents](./02-multi-agent/README.md) | Transform single agent into coordinated multi-agent system |
 | `03` | ⚡ [Automate your agent with Triggers](./03-automate-triggers/README.md) | Implement autonomous agent behaviors with event-driven triggers |
 | `04` | 📝 [Authoring Agent Instructions](./04-agent-instructions/README.md) | Master precise agent communication and behavior control |
@@ -65,9 +57,9 @@ This academy is structured as a progressive series of field operations—each mi
 | `11` | 📊 [Obtain User Feedback with Adaptive Cards](./11-obtain-user-feedback/README.md) | Collect and process user feedback for continuous improvement |
 | `12` | 🌐 [Publishing Your Agents to a Demo Website for Stakeholder Testing](./12-demo-website/README.md) | Deploy complete solution for stakeholder demonstration and testing |
 
-!!! note
-    ✅ Completing this curriculum earns you the **Operative** badge.  
-    🔓 **Commander** will be unlocked in future phases.
+> [!NOTE]
+> ✅ Completing this curriculum earns you the **Operative** badge.  
+> 🔓 **Commander** will be unlocked in future phases.
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative" alt="Analytics" />

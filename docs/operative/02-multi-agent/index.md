@@ -1,6 +1,6 @@
 # 🚨 Mission 02: Connected Agents
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## 🕵️‍♂️ CODENAME: `OPERATION SYMPHONY`
 

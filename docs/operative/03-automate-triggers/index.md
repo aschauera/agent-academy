@@ -1,6 +1,6 @@
 # Mission 03: Add Event Triggers to act autonomously
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## 🕵️‍♂️ CODENAME: `OPERATION SIGNAL POINT`
 

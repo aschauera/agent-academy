@@ -1,6 +1,6 @@
 # Obtain User Feedback with Adaptive Cards
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## Theory
 

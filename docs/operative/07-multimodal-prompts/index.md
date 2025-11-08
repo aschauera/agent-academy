@@ -1,6 +1,6 @@
 # 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## 🕵️‍♂️ CODENAME: `DOCUMENT RESUME RECON`
 

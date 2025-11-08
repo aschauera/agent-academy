@@ -1,6 +1,6 @@
 # Personalizing Agent Responses
 
---8<-- "disclaimer.md"
+<!--@include: ../../includes/disclaimer.md-->
 
 ## Theory
 
