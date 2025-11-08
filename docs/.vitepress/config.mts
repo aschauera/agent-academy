@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { mermaidPlugin } from "./plugins/vitepress-mermaid";
 
 export default defineConfig({
   title: "Agent Academy",
@@ -259,5 +260,10 @@ export default defineConfig({
         link: "https://github.com/microsoft/agent-academy/",
       },
     ],
+  },
+  markdown: {
+    config: (md) => {
+      md.use(mermaidPlugin);
+    },
   },
 });
