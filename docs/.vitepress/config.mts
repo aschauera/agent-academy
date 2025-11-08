@@ -70,7 +70,60 @@ export default defineConfig({
           },
         ],
       },
-      { text: "Operative (Preview)", link: "/operative/" },
+      {
+        text: "Operative (Preview)",
+        items: [
+          { text: "Overview", link: "/operative/" },
+          {
+            text: "Get started with the Hiring Agent",
+            link: "/operative/01-get-started/",
+          },
+          {
+            text: "Connected Agents",
+            link: "/operative/02-multi-agent/",
+          },
+          {
+            text: "Add Event Triggers to act autonomously",
+            link: "/operative/03-automate-triggers/",
+          },
+          {
+            text: "Authoring Agent Instructions",
+            link: "/operative/04-agent-instructions/",
+          },
+          {
+            text: "Personalizing Agent Responses",
+            link: "/operative/05-agent-responses/",
+          },
+          {
+            text: "AI Safety and Content Moderation",
+            link: "/operative/06-ai-safety/",
+          },
+          {
+            text: "Extracting Resume Contents with Multimodal Prompts",
+            link: "/operative/07-multimodal-prompts/",
+          },
+          {
+            text: "Enhanced prompts with Dataverse grounding",
+            link: "/operative/08-dataverse-grounding/",
+          },
+          {
+            text: "Applying Deep Reasoning",
+            link: "/operative/09-deep-reasoning/",
+          },
+          {
+            text: "Generate Candidate Specific Interview Docs",
+            link: "/operative/10-generate-documents/",
+          },
+          {
+            text: "Obtain User Feedback with Adaptive Cards",
+            link: "/operative/11-obtain-user-feedback/",
+          },
+          {
+            text: "Publishing Your Agents to a Demo Website",
+            link: "/operative/12-demo-website/",
+          },
+        ],
+      },
       { text: "Commander (Coming Soon)", link: "/commander/" },
     ],
 
@@ -147,7 +200,7 @@ export default defineConfig({
             ],
           },
           {
-            text: "Operative (Coming Soon)",
+            text: "Operative (Preview)",
             collapsed: true,
             items: [
               { text: "Overview", link: "/operative/" },
